@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { DashboardLoader } from '@/components/dashboard/DashboardLoader';
 
 export const metadata: Metadata = {
-  title: 'Your results — EcoTrace',
+  title: 'Your results — CarbonTrack',
   description:
     'Your annual carbon footprint broken down by category, compared with benchmarks, with ranked reduction tips and goal tracking.',
 };

@@ -16,7 +16,7 @@ const sora = Sora({ subsets: ['latin'], variable: '--font-sora', display: 'swap'
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'EcoTrace — Understand & reduce your carbon footprint',
+  title: 'CarbonTrack — Understand & reduce your carbon footprint',
   description:
     'Estimate your annual carbon footprint, see where it comes from, and get personalized, high-impact actions to reduce it.',
   authors: [{ name: 'Sauryadipta Bhattacharya' }],
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
           }}
         />
       </head>
-      <body className="flex min-h-screen flex-col font-sans bg-surface text-ink transition-colors duration-300">
+      <body suppressHydrationWarning={true} className="flex min-h-screen flex-col font-sans bg-surface text-ink transition-colors duration-300">
         <ThemeProvider>
           <a
             href="#main"

@@ -66,7 +66,7 @@ export function Field({
 }
 
 export const fieldControlClasses =
-  'w-full rounded-2xl border border-primary/20 bg-white px-4 py-3 text-ink shadow-sm ' +
+  'w-full rounded-2xl border border-border bg-surface-2 px-4 py-3 text-ink shadow-sm ' +
   'transition-colors placeholder:text-ink/40 ' +
   'focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary ' +
   'aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500';

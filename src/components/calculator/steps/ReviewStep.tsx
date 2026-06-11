@@ -85,7 +85,7 @@ export function ReviewStep({ input }: ReviewStepProps): JSX.Element {
 
       <dl className="grid gap-4 sm:grid-cols-2">
         {groups.map((group) => (
-          <div key={group.heading} className="rounded-2xl border border-primary/10 bg-white p-4">
+          <div key={group.heading} className="rounded-2xl border border-border bg-surface-2 p-4">
             <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-primary-dark">
               {group.heading}
             </h3>

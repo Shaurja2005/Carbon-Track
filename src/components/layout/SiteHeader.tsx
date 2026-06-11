@@ -19,7 +19,7 @@ export function SiteHeader(): JSX.Element {
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-white shadow-glow-sm transition-all duration-300 group-hover:shadow-glow animate-leaf-float">
             <Icon name="leaf" size={20} />
           </span>
-          <span className="text-gradient">EcoTrace</span>
+          <span className="text-gradient">CarbonTrack</span>
         </Link>
 
         {/* Nav + toggle */}

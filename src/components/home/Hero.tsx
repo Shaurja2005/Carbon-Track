@@ -30,14 +30,13 @@ export function Hero(): JSX.Element {
 
           {/* Headline */}
           <h1 className="mt-8 font-display text-5xl font-bold tracking-tight sm:text-7xl animate-fade-slide-up delay-100">
-            <span className="text-ink">Understand.</span>{' '}
-            <span className="text-gradient">Track.</span>{' '}
-            <span className="text-ink">Reduce.</span>
+            <span className="text-ink">Analyze.</span>{' '}
+            <span className="text-gradient">Measure.</span>{' '}
+            <span className="text-ink">Improve.</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted animate-fade-slide-up delay-200">
-            Estimate your annual CO₂e in two minutes, see exactly where it comes from, and get
-            personalized, high-impact actions — all privately, in your browser. No account required.
+            Quickly calculate your yearly carbon footprint, uncover your main emission sources, and discover actionable steps to lower your impact—completely offline within your browser. No signup needed.
           </p>
 
           {/* CTAs */}
@@ -51,9 +50,8 @@ export function Hero(): JSX.Element {
             </ButtonLink>
           </div>
 
-          <p className="mt-5 text-sm text-ink-subtle animate-fade-slide-up delay-400">
-            Free &middot; No sign-up &middot; Aligned to a {TARGET_TONNES}t&nbsp;CO₂e science-based
-            target
+          <p className="mt-8 text-sm text-ink-subtle animate-fade-slide-up delay-500">
+            100% Free &middot; Private &middot; Based on 1.5°C climate goals
           </p>
 
           {/* Stats strip */}

@@ -16,7 +16,7 @@ export function SiteFooter(): JSX.Element {
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
                 <Icon name="leaf" size={18} />
               </span>
-              <span className="font-display font-semibold text-ink">EcoTrace</span>
+              <span className="font-display font-semibold text-ink">CarbonTrack</span>
             </div>
             <p className="max-w-xs text-sm text-ink-muted leading-relaxed">
               A carbon footprint awareness platform. Understand, track, and reduce your impact
@@ -48,7 +48,7 @@ export function SiteFooter(): JSX.Element {
 
         <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-ink-subtle">
-            &copy; {new Date().getFullYear()} EcoTrace &middot; Carbon Footprint Awareness Platform
+            &copy; {new Date().getFullYear()} CarbonTrack &middot; Carbon Footprint Awareness Platform
           </p>
           <p className="text-xs text-ink-subtle">
             Estimates are for awareness only. Your data stays on your device.

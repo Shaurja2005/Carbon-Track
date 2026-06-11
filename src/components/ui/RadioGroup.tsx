@@ -59,7 +59,7 @@ export function RadioGroup<T extends string>({
                 'has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-primary has-[:focus-visible]:ring-offset-2 has-[:focus-visible]:ring-offset-surface',
                 checked
                   ? 'border-primary bg-primary/5 ring-1 ring-primary'
-                  : 'border-primary/20 bg-white hover:border-primary/40',
+                  : 'border-border bg-surface-2 hover:border-primary/40',
               )}
             >
               <input

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { CalculatorForm } from '@/components/calculator/CalculatorForm';
 
 export const metadata: Metadata = {
-  title: 'Calculator — EcoTrace',
+  title: 'Calculator — CarbonTrack',
   description:
     'Answer a short six-step questionnaire to estimate your annual carbon footprint across transport, home energy, food, and shopping.',
 };

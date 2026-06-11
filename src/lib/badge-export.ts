@@ -115,7 +115,7 @@ export function generateBadgePng(data: BadgeData): string {
   // Logo leaf + Brand name
   ctx.fillStyle = PRIMARY;
   ctx.font = 'bold 13px system-ui, sans-serif';
-  ctx.fillText('EcoTrace', cx + 18, cy + 2);
+  ctx.fillText('CarbonTrack', cx + 18, cy + 2);
   ctx.fillStyle = INK_MUTED;
   ctx.font = '11px system-ui, sans-serif';
   ctx.fillText('Carbon Footprint Summary', cx + 18, cy + 16);
@@ -176,7 +176,7 @@ export function generateBadgePng(data: BadgeData): string {
   // Footer
   ctx.font = '10px system-ui, sans-serif';
   ctx.fillStyle = INK_MUTED;
-  ctx.fillText('Data stays on your device. ecotrace.app', cx, cy + 12);
+  ctx.fillText('Data stays on your device. carbontrack.app', cx, cy + 12);
   ctx.fillStyle = PRIMARY;
   ctx.fillText('Built by Sauryadipta Bhattacharya', cardX + cardW - 200, cy + 12);
 
@@ -184,7 +184,7 @@ export function generateBadgePng(data: BadgeData): string {
 }
 
 /** Trigger a browser download of a PNG data URL. */
-export function downloadPng(dataUrl: string, filename = 'ecotrace-carbon-badge.png'): void {
+export function downloadPng(dataUrl: string, filename = 'carbontrack-carbon-badge.png'): void {
   const a = document.createElement('a');
   a.href = dataUrl;
   a.download = filename;

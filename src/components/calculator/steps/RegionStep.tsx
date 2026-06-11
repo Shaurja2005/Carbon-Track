@@ -22,8 +22,8 @@ export interface RegionStepProps {
 export function RegionStep({ value, onChange, errors }: RegionStepProps): JSX.Element {
   return (
     <RadioGroup
-      legend="Where do you live?"
-      hint="This sets your electricity grid intensity and the averages you're compared against."
+      legend="Select your region."
+      hint="This determines your local power grid emissions and benchmark comparisons."
       name="region"
       value={value}
       error={errors.region}
