@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { expect, test, describe } from 'vitest';
 import { calculatePledgeMilestones } from './pledge';
 import type { HistoryEntry } from './schemas';

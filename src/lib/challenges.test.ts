@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { expect, test, describe } from 'vitest';
 import { selectWeeklyChallenge, getAllChallenges, isoWeekKey } from './challenges';
 import type { FootprintResult } from './schemas';
