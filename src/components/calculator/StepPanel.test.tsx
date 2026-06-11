@@ -11,7 +11,7 @@ function renderStep(step: number): void {
 describe('StepPanel', () => {
   it('renders the region question on step 0', () => {
     renderStep(0);
-    expect(screen.getByText(/where do you live\?/i)).toBeInTheDocument();
+    expect(screen.getByText(/select your region\./i)).toBeInTheDocument();
   });
 
   it('renders transport fields on step 1', () => {

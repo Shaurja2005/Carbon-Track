@@ -14,7 +14,7 @@ export function SiteFooter(): JSX.Element {
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
-                <Icon name="leaf" size={18} />
+                <Icon name="hexagon" size={18} />
               </span>
               <span className="font-display font-semibold text-ink">CarbonTrack</span>
             </div>

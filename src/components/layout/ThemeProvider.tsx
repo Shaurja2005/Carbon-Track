@@ -7,8 +7,7 @@ type Theme = 'light' | 'dark';
 const STORAGE_KEY = 'ecotrace:theme';
 
 function getSystemTheme(): Theme {
-  if (typeof window === 'undefined') return 'dark';
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return 'dark'; // Default to dark mode per user preference
 }
 
 function readStoredTheme(): Theme | null {

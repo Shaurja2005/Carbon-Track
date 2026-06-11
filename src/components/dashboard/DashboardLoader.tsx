@@ -45,7 +45,7 @@ export function DashboardLoader(): JSX.Element {
     return (
       <Card className="flex flex-col items-center gap-4 py-12 text-center">
         <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-          <Icon name="leaf" size={28} />
+          <Icon name="hexagon" size={28} />
         </span>
         <h2 className="font-display text-2xl font-bold text-ink">No results yet</h2>
         <p className="max-w-md text-ink-muted">

@@ -12,6 +12,7 @@ import { type JSX, type SVGProps } from 'react';
 
 export type IconName =
   | 'leaf'
+  | 'hexagon'
   | 'car'
   | 'home'
   | 'food'
@@ -50,6 +51,9 @@ interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'name'> {
 const PATHS: Record<IconName, React.ReactNode> = {
   leaf: (
     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a7 7 0 0 1-7 7zm0 0c0-3 1-6 6-9" />
+  ),
+  hexagon: (
+    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
   ),
   car: (
     <>

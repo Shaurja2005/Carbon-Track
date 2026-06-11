@@ -17,7 +17,7 @@ export function SiteHeader(): JSX.Element {
           className="group flex items-center gap-2.5 rounded-xl px-1 font-display text-lg font-bold text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-white shadow-glow-sm transition-all duration-300 group-hover:shadow-glow animate-leaf-float">
-            <Icon name="leaf" size={20} />
+            <Icon name="hexagon" size={20} />
           </span>
           <span className="text-gradient">CarbonTrack</span>
         </Link>
