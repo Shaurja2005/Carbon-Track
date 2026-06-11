@@ -1,0 +1,22 @@
+/**
+ * Public API for the EcoTrace logic core.
+ *
+ * The frontend should import everything it needs from `@/lib`. Keeping a single
+ * barrel here means the UI never reaches into individual modules, so the internal
+ * file layout can change without touching component code.
+ */
+export * from './number';
+export * from './emission-factors';
+export * from './schemas';
+export * from './calculator';
+export * from './comparisons';
+export * from './breakdown';
+export * from './goal';
+export * from './tips-engine';
+export * from './storage';
+export * from './format';
+export * from './narratives';
+export * from './challenges';
+export * from './country-data';
+export * from './pledge';
+export * from './badge-export';

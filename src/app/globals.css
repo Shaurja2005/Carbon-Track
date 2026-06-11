@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   EcoTrace — Design tokens
+   Light and dark palettes are defined here as CSS custom properties.
+   Tailwind reads them via tailwind.config.ts. Keep both files in sync.
+   The .dark class is applied to <html> by ThemeProvider.
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* Core palette — light */
+  --color-primary: #059669;
+  --color-primary-light: #10b981;
+  --color-primary-dark: #047857;
+  --color-secondary: #10b981;
+  --color-accent: #0891b2;
+  --color-warning: #f59e0b;
+
+  /* Surfaces — light */
+  --color-surface: #f0fdf9;
+  --color-surface-2: #ffffff;
+  --color-surface-3: #ecfdf5;
+
+  /* Text — light */
+  --color-ink: #064e3b;
+  --color-ink-muted: #065f46cc;
+  --color-ink-subtle: #065f4680;
+
+  /* Border — light */
+  --color-border: rgba(5, 150, 105, 0.15);
+
+  /* Glows — light (subtle) */
+  --glow-primary: rgba(5, 150, 105, 0.25);
+  --glow-accent: rgba(8, 145, 178, 0.2);
+
+  /* Hero gradients — light */
+  --hero-glow-top: rgba(5, 150, 105, 0.12);
+  --mesh-1: rgba(16, 185, 129, 0.08);
+  --mesh-2: rgba(8, 145, 178, 0.07);
+  --mesh-3: rgba(5, 150, 105, 0.06);
+
+  color-scheme: light;
+}
+
+.dark {
+  /* Core palette — dark (same hue, brighter for contrast) */
+  --color-primary: #10b981;
+  --color-primary-light: #34d399;
+  --color-primary-dark: #059669;
+  --color-secondary: #34d399;
+  --color-accent: #22d3ee;
+  --color-warning: #fbbf24;
+
+  /* Surfaces — dark */
+  --color-surface: #080f0a;
+  --color-surface-2: #0d1a11;
+  --color-surface-3: #111f16;
+
+  /* Text — dark */
+  --color-ink: #e2f5ee;
+  --color-ink-muted: rgba(226, 245, 238, 0.75);
+  --color-ink-subtle: rgba(226, 245, 238, 0.45);
+
+  /* Border — dark */
+  --color-border: rgba(16, 185, 129, 0.18);
+
+  /* Glows — dark (vivid) */
+  --glow-primary: rgba(16, 185, 129, 0.45);
+  --glow-accent: rgba(34, 211, 238, 0.35);
+
+  /* Hero gradients — dark */
+  --hero-glow-top: rgba(16, 185, 129, 0.22);
+  --mesh-1: rgba(16, 185, 129, 0.12);
+  --mesh-2: rgba(34, 211, 238, 0.09);
+  --mesh-3: rgba(5, 150, 105, 0.08);
+
+  color-scheme: dark;
+}
+
+/* ---------------------------------------------------------------------------
+   Base resets
+   --------------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------------------------------------------------------------------------
+   Utility: animation delay helpers (used with staggered fade-slide-up)
+   --------------------------------------------------------------------------- */
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+/* ---------------------------------------------------------------------------
+   Gradient text utility
+   --------------------------------------------------------------------------- */
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------------------------------------------------------------------------
+   Glassmorphism utility
+   --------------------------------------------------------------------------- */
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px) saturate(1.8);
+  -webkit-backdrop-filter: blur(16px) saturate(1.8);
+  border: 1px solid var(--color-border);
+}
+
+.dark .glass {
+  background: rgba(13, 26, 17, 0.65);
+}
+
+/* ---------------------------------------------------------------------------
+   Shimmer / loading animation
+   --------------------------------------------------------------------------- */
+
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+.dark .shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(16, 185, 129, 0.08) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+}
+
+/* ---------------------------------------------------------------------------
+   Scrollbar styling (webkit)
+   --------------------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* ---------------------------------------------------------------------------
+   Focus styles — consistent ring for keyboard navigation
+   --------------------------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------------------------
+   Reduced motion — respect user preference globally
+   --------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
