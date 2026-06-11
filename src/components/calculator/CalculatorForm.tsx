@@ -53,7 +53,7 @@ export function CalculatorForm(): JSX.Element {
               Back
             </Button>
             {step === LAST_STEP ? (
-              <Button type="submit" size="lg" variant="accent">
+              <Button type="submit" size="lg" variant="accent" className="animate-pulse-glow">
                 See my results
                 <Icon name="arrow-right" size={18} />
               </Button>

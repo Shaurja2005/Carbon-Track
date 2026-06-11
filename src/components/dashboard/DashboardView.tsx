@@ -96,7 +96,7 @@ export function DashboardView({ input, history, goal }: DashboardViewProps): JSX
 
       <DashboardSection id="overview-heading" title="Your numbers">
         <div className="grid gap-4 lg:grid-cols-3">
-          <StatCard label="Annual footprint" value={formatCo2(result.totalKg)} icon="leaf" glow>
+          <StatCard label="Annual footprint" value={formatCo2(result.totalKg)} icon="hexagon" glow>
             <p className="text-sm text-ink-muted">
               Across transport, home energy, food, and shopping in {REGION_LABELS[input.region]}.
             </p>

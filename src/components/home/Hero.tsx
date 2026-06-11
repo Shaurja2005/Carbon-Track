@@ -1,8 +1,7 @@
 import type { JSX } from 'react';
 import { ButtonLink, Icon } from '@/components/ui';
 
-
-/** Above-the-fold hero — gradient headline, animated badge, and stat strip. */
+/** Above-the-fold hero — split screen layout (Logo Left, Content Right). */
 export function Hero(): JSX.Element {
   return (
     <section className="relative overflow-hidden">
@@ -17,60 +16,58 @@ export function Hero(): JSX.Element {
         className="pointer-events-none absolute inset-0 bg-gradient-mesh opacity-60"
       />
 
-      <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-36">
-        <div className="mx-auto max-w-3xl text-center">
-          {/* Badge */}
-          <span
-            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary animate-pulse-glow"
-            style={{ animationDelay: '0ms' }}
-          >
-            <Icon name="leaf" size={15} />
-            Carbon Footprint Awareness Platform
-          </span>
-
-          {/* Headline */}
-          <h1 className="mt-8 font-display text-5xl font-bold tracking-tight sm:text-7xl animate-fade-slide-up delay-100">
-            <span className="text-ink">Analyze.</span>{' '}
-            <span className="text-gradient">Measure.</span>{' '}
-            <span className="text-ink">Improve.</span>
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted animate-fade-slide-up delay-200">
-            Quickly calculate your yearly carbon footprint, uncover your main emission sources, and discover actionable steps to lower your impact—completely offline within your browser. No signup needed.
-          </p>
-
-          {/* CTAs */}
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row animate-fade-slide-up delay-300">
-            <ButtonLink href="/calculator" size="lg">
-              Calculate your footprint
-              <Icon name="arrow-right" size={20} />
-            </ButtonLink>
-            <ButtonLink href="/dashboard" size="lg" variant="secondary">
-              View your dashboard
-            </ButtonLink>
+      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-32">
+        <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+          
+          {/* Left Column: Visual (Logo Only) */}
+          <div className="relative hidden lg:flex items-center justify-center animate-fade-slide-up delay-300">
+            <Icon 
+              name="hexagon" 
+              size={350} 
+              className="text-primary opacity-80 animate-pulse-glow drop-shadow-2xl" 
+            />
           </div>
 
-          <p className="mt-8 text-sm text-ink-subtle animate-fade-slide-up delay-500">
-            100% Free &middot; Private &middot; Based on 1.5°C climate goals
-          </p>
+          {/* Right Column: Text & CTAs */}
+          <div className="flex flex-col items-start text-left">
+            {/* Badge */}
+            <span
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary animate-pulse-glow"
+              style={{ animationDelay: '0ms' }}
+            >
+              <Icon name="hexagon" size={15} />
+              Carbon Footprint Awareness Platform
+            </span>
 
-          {/* Stats strip */}
-          <div className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4 animate-fade-slide-up delay-500">
-            {[
-              { value: '4', label: 'Emission categories' },
-              { value: '30+', label: 'Countries compared' },
-              { value: '8', label: 'Reduction tips' },
-              { value: '2min', label: 'To complete' },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="glass rounded-2xl px-4 py-4 text-center"
-              >
-                <p className="font-display text-2xl font-bold text-primary">{stat.value}</p>
-                <p className="mt-1 text-xs text-ink-muted">{stat.label}</p>
-              </div>
-            ))}
+            {/* Headline */}
+            <h1 className="mt-8 font-display text-5xl font-bold tracking-tight sm:text-7xl animate-fade-slide-up delay-100">
+              <span className="text-ink">Analyze.</span> <br className="hidden lg:block" />
+              <span className="text-gradient">Measure.</span> <br className="hidden lg:block" />
+              <span className="text-ink">Improve.</span>
+            </h1>
+
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted animate-fade-slide-up delay-200">
+              Quickly calculate your yearly carbon footprint, uncover your main emission sources, and
+              discover actionable steps to lower your impact—completely offline within your browser.
+              No signup needed.
+            </p>
+
+            {/* CTAs */}
+            <div className="mt-10 flex flex-wrap items-center gap-3 animate-fade-slide-up delay-300">
+              <ButtonLink href="/calculator" size="lg">
+                Calculate your footprint
+                <Icon name="arrow-right" size={20} />
+              </ButtonLink>
+              <ButtonLink href="/dashboard" size="lg" variant="secondary">
+                View your dashboard
+              </ButtonLink>
+            </div>
+
+            <p className="mt-8 text-sm text-ink-subtle animate-fade-slide-up delay-500">
+              100% Free &middot; Private &middot; Based on 1.5°C climate goals
+            </p>
           </div>
+
         </div>
       </div>
     </section>
