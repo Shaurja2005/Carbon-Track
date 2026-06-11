@@ -87,10 +87,6 @@ function buildBreakdown(
   bottomKg: number,
   input: FootprintInput
 ): string {
-  if (topCat === bottomCat) {
-    return `${CATEGORY_NAMES[topCat]} accounts for the majority of your footprint.`;
-  }
-
   const topPct = result.totalKg > 0 ? Math.round((topKg / result.totalKg) * 100) : 0;
   const topName = CATEGORY_NAMES[topCat] ?? topCat;
   const bottomName = CATEGORY_NAMES[bottomCat] ?? bottomCat;

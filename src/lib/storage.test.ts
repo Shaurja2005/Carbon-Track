@@ -10,6 +10,9 @@ import {
   loadInput,
   saveGoal,
   saveInput,
+  loadChallengeEntries,
+  saveChallengeEntry,
+  clearChallengeEntries,
 } from './storage';
 import { defaultFootprintInput, type Goal } from './schemas';
 
@@ -176,5 +179,27 @@ describe('removal without storage', () => {
       clearGoal();
       clearHistory();
     }).not.toThrow();
+  });
+});
+
+describe('challenge persistence', () => {
+  it('saves, loads, updates, and clears challenge entries', () => {
+    const entry = { weekKey: '2026-W01', challengeId: 'c1', status: 'done', completedAt: '2026-01-01', savingKg: 5 } as any;
+    expect(loadChallengeEntries()).toEqual([]);
+    
+    // append
+    saveChallengeEntry(entry);
+    expect(loadChallengeEntries()).toHaveLength(1);
+    expect(loadChallengeEntries()[0].status).toBe('done');
+    
+    // update
+    const updated = { ...entry, status: 'skipped' };
+    saveChallengeEntry(updated);
+    expect(loadChallengeEntries()).toHaveLength(1);
+    expect(loadChallengeEntries()[0].status).toBe('skipped');
+    
+    // clear
+    clearChallengeEntries();
+    expect(loadChallengeEntries()).toEqual([]);
   });
 });
