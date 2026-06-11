@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { ButtonLink, Icon } from '@/components/ui';
-import { TARGET_TONNES } from '@/lib';
+
 
 /** Above-the-fold hero — gradient headline, animated badge, and stat strip. */
 export function Hero(): JSX.Element {
