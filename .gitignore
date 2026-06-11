@@ -45,7 +45,3 @@ yarn-error.log*
 # AI assistant local cache & settings (keeps the repo small and secret-free)
 .claude/
 
-# local planning / prompt notes (kept out of the public repo)
-PROJECT_PLAN.md
-FRONTEND_PROMPT.md
-LINKEDIN_POST.md
